@@ -18,4 +18,9 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log('app module');
+    
+  }
+}

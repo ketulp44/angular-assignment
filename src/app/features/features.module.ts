@@ -2,18 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FeaturesRoutingModule } from './features-routing.module';
-import { HeaderComponent } from './header/header.component';
-import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
+import { HeaderComponent } from '../shared/header/header.component';
+import { SidebarMenuComponent } from '../shared/sidebar-menu/sidebar-menu.component';
 import { ContainerComponent } from './container/container.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarMenuComponent, ContainerComponent],
+  declarations: [ContainerComponent, HomeComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule
   ],
   exports: [
-    HeaderComponent, SidebarMenuComponent,ContainerComponent
+    ContainerComponent,HomeComponent
   ]
 })
-export class FeaturesModule {}
+export class FeaturesModule {
+  
+  constructor(){
+    console.log('feature module');
+  }
+}

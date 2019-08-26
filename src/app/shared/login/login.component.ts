@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.authService.login().subscribe((data)=>{
         if(data){
-          this.router.navigate(['dashboard']);
+          this.router.navigate([this.authService.redirectUrl]);
         }
     });    
   }
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.valid){
       localStorage.setItem('email',this.email.value);
       localStorage.setItem('password',this.password.value);
+      this.authService.login();
       this.authService.isLoggedIn=true;
       this.router.navigate([this.authService.redirectUrl]);
     }

@@ -6,14 +6,21 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FeaturesModule } from '../features/features.module';
+import { HeaderComponent } from './header/header.component';
+import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 @NgModule({
-  declarations: [LoginComponent, DashboardComponent],
+  declarations: [LoginComponent, DashboardComponent,HeaderComponent,SidebarMenuComponent],
   imports: [
     CommonModule,
     SharedRoutingModule,
     ReactiveFormsModule,
-    FeaturesModule
+    // FeaturesModule
   ],
   exports:[LoginComponent, DashboardComponent]
 })
-export class SharedModule { }
+export class SharedModule {
+  constructor(){
+    console.log('shared module');
+    
+  }
+ }
