@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Name">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            <small *ngIf="name.errors?.minlength">Atleast  3 character required</small>
+            <small *ngIf="name.errors?.required">Name field is required</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" formControlName="email" id="inputEmail4" placeholder="Email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+            <small *ngIf="email.errors?.email">please enter the valid email</small>
+            <small *ngIf="email.errors?.required">Email field is required</small>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Mobile number:</label>
+        <input type="tel" id="phone" class="form-control" name="phone" formControlName="mobileNo" placeholder="mobile no">
+        <div *ngIf="mobileNo.invalid && (mobileNo.dirty || mobileNo.touched)" class="alert alert-danger">
+            <small *ngIf="mobileNo.errors?.pattern">please enter valid mobile no</small>
+            <small *ngIf="mobileNo.errors?.required">Mobile no field is required</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword4">Password</label>
+        <input type="password" class="form-control" formControlName="password" id="inputPassword4" placeholder="Password">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+            <small *ngIf="password.errors?.invalidPassword">should contain one upper case, one digit and one special characters and at least 8 character long</small>
+            <small *ngIf="password.errors?.required">Email field is required</small>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid" (click)="onSubmit()">Register</button>
+</form>
+
+<div *ngIf="submitted" class="container my-3">
+    <div><span>name : {{name.value}}</span></div>
+    <div><span>email: {{email.value}}</span></div>
+    <div><span>password : {{password.value}} </span></div>
+    <div><span>mobileNo : {{mobileNo.value}}</span></div>
+</div>

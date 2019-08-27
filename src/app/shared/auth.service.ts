@@ -12,10 +12,7 @@ export class AuthService {
   redirectUrl:String = "/dashboard";
 
   login(): Observable<boolean> {
-    return of(localStorage.getItem('email') == 'ketulp@gmail.com' && localStorage.getItem('password') =='ketul123').pipe(
-      delay(1000),
-      tap(val => this.isLoggedIn = true)
-    );
+    return of(localStorage.getItem('email') == 'ketulp@gmail.com' && localStorage.getItem('password') =='ketul123').pipe(tap(val => this.isLoggedIn = true));
   }
   
   logout(): void {

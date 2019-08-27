@@ -34,7 +34,9 @@ export class HomeComponent implements OnInit {
     this.images.map((country)=>{      
       country.states.forEach((state)=>{
         state.images.forEach((image)=>{
-           this.selectedImages.push('assets/images/'+country+'/'+state+'/'+image);
+          console.log('assets/images/'+country.country+'/'+state.state+'/'+image);
+          
+           this.selectedImages.push('assets/images/'+country.country+'/'+state.state+'/'+image);
         });
       });
     });

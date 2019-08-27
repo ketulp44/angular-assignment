@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +14,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

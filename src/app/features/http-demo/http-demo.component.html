@@ -1,0 +1,41 @@
+<div>
+    <h2>students</h2>
+    <div *ngFor="let student of students ">
+        <div>
+            <span>id : {{student.id}}</span>
+        </div>
+        <div>
+            <span>name : {{student.name}}</span>
+        </div>
+        <div>
+            <span>surname : {{student.surname}}</span>
+        </div>
+        <div>
+            <span>standard {{student.standard}}</span>
+        </div>
+        <div>
+            <span>address {{student.address}}</span>
+        </div>
+    </div>
+</div>
+<div>
+    <form [formGroup]="form">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" formControlName="name" placeholder="name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" formControlName="surname" placeholder="surname">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" formControlName="address" placeholder="address">
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" formControlName="standard" placeholder="standard">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="submit()">save</button>
+    </form>
+</div>

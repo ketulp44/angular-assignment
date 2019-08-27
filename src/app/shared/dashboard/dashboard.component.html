@@ -1,8 +1,8 @@
 <div class='header'>
-    <app-header></app-header>
+    <app-header (toggle)="toggleSideBar($event)"></app-header>
 </div>
 <div>
-    <div class="sidebar">
+    <div class="sidebar" *ngIf="sideBar">
         <app-sidebar-menu></app-sidebar-menu>
     </div>
     <div class='container main-container my-2'>

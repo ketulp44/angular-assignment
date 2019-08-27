@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  sideBar: boolean=false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  toggleSideBar(value){
+    this.sideBar=value;
+  }
 }
