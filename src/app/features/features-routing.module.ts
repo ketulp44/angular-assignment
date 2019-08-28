@@ -5,6 +5,8 @@ import { ContainerComponent } from './container/container.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
+import { DynamicFormDemoComponent } from './dynamic-form-demo/dynamic-form-demo.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [{
   path: 'home',
@@ -25,6 +27,14 @@ const routes: Routes = [{
 {
   path: 'http',
   component: HttpDemoComponent
+},
+{
+  path: 'dynamicform',
+  component: DynamicFormDemoComponent
+},
+{
+  path: 'carousel',
+  component: CarouselComponent
 },
 {
   path: '',

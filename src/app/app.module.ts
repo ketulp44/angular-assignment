@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -16,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
     SharedModule,
     AngularFontAwesomeModule,
     HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

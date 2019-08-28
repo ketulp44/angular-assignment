@@ -13,9 +13,14 @@ import { ContainerbottomComponent } from './containerbottom/containerbottom.comp
 import { DirectiveComponent } from './directive/directive.component';
 import { UnlessDirective } from './unless.directive';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
+import { DynamicFormDemoComponent } from './dynamic-form-demo/dynamic-form-demo.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { SlideChangeDirective } from './slide-change.directive';
 
 @NgModule({
-  declarations: [ContainerComponent, HomeComponent, RegistrationComponent, ContainertopComponent, ContainerbottomComponent, DirectiveComponent, UnlessDirective, HttpDemoComponent],
+  declarations: [ContainerComponent, HomeComponent, RegistrationComponent, ContainertopComponent, ContainerbottomComponent, DirectiveComponent, UnlessDirective, HttpDemoComponent, DynamicFormComponent, DynamicFormQuestionComponent, DynamicFormDemoComponent, CarouselComponent, SlideChangeDirective],
   imports: [
     CommonModule,
     FeaturesRoutingModule,

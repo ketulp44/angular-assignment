@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-carousel',
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.scss']
 })
-export class HomeComponent implements OnInit {
-
+export class CarouselComponent implements OnInit {
+  @ViewChild('carouselExampleIndicators') el:ElementRef;
   disabelState: boolean=true;
   constructor() { }
   selectedCountry:String;
   selectedState:String;
+  color:String="red";
   images = [
     {
       country: "india",
@@ -104,4 +105,10 @@ export class HomeComponent implements OnInit {
     console.log(this.selectedImages);
     
   }
+  onSlide(){
+    // this.el.nativeElement.
+    console.log('slide');
+    
+  }
+ 
 }

@@ -1,5 +1,6 @@
 <div>select country</div>
-<select (change)="onCountrySelect($event.target.value)" #coutrySelect [value]="selectedCountry"> 
+<p slideChange>Ketul</p>
+<select slideChange (change)="onCountrySelect($event.target.value)" #coutrySelect [value]="selectedCountry"> 
     <option value="all">All</option>
     <option *ngFor="let country of countries" [value]="country" >{{country}}</option>    
 </select>
@@ -10,20 +11,17 @@
 </select>
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" slideChange [parent]="stateSelect">
     <ol class="carousel-indicators">
         <li *ngFor="let image of selectedImages ; let i = index" [attr.data-index]="i" data-target="#carouselExampleIndicators" data-slide-to=i class="active"></li>
-        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+
     </ol>
     <div class="carousel-inner">
 
         <div class="carousel-item" *ngFor="let image of selectedImages; let i = index" [attr.data-index]="i" [ngClass]="{'active': i==0}">
             <img class="d-block w-100" [src]="image" alt="Second slide">
         </div>
-        <!-- <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
-        </div> -->
+
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,4 +31,5 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
+
 </div>
