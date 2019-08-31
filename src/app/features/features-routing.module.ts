@@ -7,6 +7,7 @@ import { DirectiveComponent } from './directive/directive.component';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
 import { DynamicFormDemoComponent } from './dynamic-form-demo/dynamic-form-demo.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { HighchartComponent } from './highchart/highchart.component';
 
 const routes: Routes = [{
   path: 'home',
@@ -35,6 +36,10 @@ const routes: Routes = [{
 {
   path: 'carousel',
   component: CarouselComponent
+},
+{
+  path: 'highchart',
+  component: HighchartComponent
 },
 {
   path: '',

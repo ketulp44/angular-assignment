@@ -18,9 +18,10 @@ import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-fo
 import { DynamicFormDemoComponent } from './dynamic-form-demo/dynamic-form-demo.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SlideChangeDirective } from './slide-change.directive';
+import { HighchartComponent } from './highchart/highchart.component';
 
 @NgModule({
-  declarations: [ContainerComponent, HomeComponent, RegistrationComponent, ContainertopComponent, ContainerbottomComponent, DirectiveComponent, UnlessDirective, HttpDemoComponent, DynamicFormComponent, DynamicFormQuestionComponent, DynamicFormDemoComponent, CarouselComponent, SlideChangeDirective],
+  declarations: [ContainerComponent, HomeComponent, RegistrationComponent, ContainertopComponent, ContainerbottomComponent, DirectiveComponent, UnlessDirective, HttpDemoComponent, DynamicFormComponent, DynamicFormQuestionComponent, DynamicFormDemoComponent, CarouselComponent, SlideChangeDirective, HighchartComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
